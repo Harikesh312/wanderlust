@@ -3,21 +3,23 @@
   <div class="col-8 offset-2">
     <br> <br>
     <h3>Create a New Listing</h3>
-    <form method="post" action="/listings">
+    <form method="post" action="/listings" novalidate class="needs-validation">
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
         <input
           class="form-control"
           name="listing[title]"
           placeholder="enter title"
-          type="text" />
+          type="text"
+          required
+          />
       </div>
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
         <textarea
           name="listing[description]"
           placeholder="enter description"
-          class="form-control"></textarea>
+          class="form-control" required></textarea>
       </div>
       <div class="mb-3">
         <label for="image" class="form-label">Image Link</label>
@@ -25,7 +27,8 @@
           class="form-control"
           name="listing[image]"
           placeholder="enter image URL/Link"
-          type="text" />
+          type="text"
+          />
       </div>
       <div class="row">
         <div class="mb-3 col-md-4">
@@ -34,7 +37,9 @@
             class="form-control"
             name="listing[price]"
             placeholder="enter price"
-            type="number" />
+            type="number" 
+            required
+            />
         </div>
         <div class="mb-3 col-md-8">
           <label for="country" class="form-label">Country</label>
@@ -42,7 +47,9 @@
             class="form-control"
             name="listing[country]"
             placeholder="enter country"
-            type="text" />
+            type="text" 
+            required
+            />
         </div>
       </div>
       <div class="mb-3">
@@ -51,7 +58,9 @@
           class="form-control"
           name="listing[location]"
           placeholder="enter location"
-          type="text" />
+          type="text" 
+          required
+          />
       </div>
       <button class="btn btn-danger mb-4">Add</button>
       <br> <br>
